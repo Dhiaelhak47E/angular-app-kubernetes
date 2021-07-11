@@ -19,7 +19,7 @@ variables:
   imagePullSecret: 'dhia001acr39027c7d-auth'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'default'
 
   # Name of the new namespace being created to deploy the PR changes.
   k8sNamespaceForPR: 'review-app-$(System.PullRequest.PullRequestId)'
