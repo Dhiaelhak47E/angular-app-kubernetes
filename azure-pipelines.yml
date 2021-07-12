@@ -18,8 +18,8 @@ variables:
   tag: '$(Build.BuildId)'
   imagePullSecret: 'dhia001acr39027c7d-auth'
 
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  
+
 
   # Name of the new namespace being created to deploy the PR changes.
   k8sNamespaceForPR: 'review-app-$(System.PullRequest.PullRequestId)'
@@ -31,7 +31,8 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: $(vmImageName)
+      vmImage: PaasAgent
+     
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
